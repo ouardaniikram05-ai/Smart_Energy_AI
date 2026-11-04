@@ -1,0 +1,12 @@
+# Environnement virtuel
+.venv/
+
+# Fichiers Python temporaires
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Données brutes volumineuses
+01_Dataset/Raw/*
