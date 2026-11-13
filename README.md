@@ -47,43 +47,43 @@ Gestion du projet et collaboration: Git, GitHub, Visual Studio Code
 ______________________________________________________________________________________________________________________
 ## Organisation du projet
 
-Smart_Energy_AI/
-│
-├── 01_Dataset/
-│   ├── Raw/
-│   └── Processed/
-│
-├── 02_Data_Preparation/
-│   ├── notebooks/
-│   └── src/
-│
-├── 03_Consumption_Prediction/
-│   ├── notebooks/
-│   ├── models/
-│   └── src/
-│
-├── 04_Anomaly_Detection/
-│   ├── notebooks/
-│   ├── models/
-│   └── src/
-│
-├── 05_Appliance_Analysis/
-│   └── src/
-│
-├── 06_Dashboard/
-│
-├── 07_Hardware/
-│   ├── ESP32/
-│   ├── Raspberry_Pi/
-│   └── Circuit_Diagrams/
-│
-├── 08_Integration/
-│
-├── 09_Documentation/
-│
-├── .gitignore
-├── requirements.txt
-└── README.md
+Smart_Energy_AI/  
+│  
+├── 01_Dataset/  
+│   ├── Raw/  
+│   └── Processed/  
+│  
+├── 02_Data_Preparation/  
+│   ├── notebooks/  
+│   └── src/  
+│  
+├── 03_Consumption_Prediction/  
+│   ├── notebooks/  
+│   ├── models/  
+│   └── src/  
+│  
+├── 04_Anomaly_Detection/  
+│   ├── notebooks/  
+│   ├── models/  
+│   └── src/  
+│  
+├── 05_Appliance_Analysis/  
+│   └── src/  
+│  
+├── 06_Dashboard/  
+│  
+├── 07_Hardware/  
+│   ├── ESP32/  
+│   ├── Raspberry_Pi/  
+│   └── Circuit_Diagrams/  
+│  
+├── 08_Integration/  
+│  
+├── 09_Documentation/  
+│  
+├── .gitignore  
+├── requirements.txt  
+└── README.md  
 ______________________________________________________________________________________________________________________
 ##  Installation et configuration
 
