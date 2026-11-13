@@ -111,4 +111,34 @@ python -m venv .venv
 ```bash
 python -m pip install -r requirements.txt
 ```
+## Remarque – Accès aux datasets
 
+Pour accéder aux datasets nettoyés et préparés, les membres de l'équipe doivent récupérer la branche `develop` du dépôt GitHub.
+
+### 1. Récupérer le projet
+
+```bash
+git clone -b develop https://github.com/ouardaniikram05-ai/Smart_Energy_AI.git
+```
+
+### 2. Localisation des datasets
+
+Les fichiers sont disponibles dans `01_Dataset/Processed/` :
+
+- `household_power_consumption_final.csv.gz` : dataset nettoyé (données à la minute).
+- `household_hourly.csv.gz` : dataset préparé (données horaires).
+- `readme.md` : documentation des datasets.
+
+### 3. Charger un dataset avec Python
+
+```python
+import pandas as pd
+
+df = pd.read_csv(
+    "../../01_Dataset/Processed/household_power_consumption_final.csv.gz",
+    compression="gzip",
+    parse_dates=["Datetime"]
+)
+```
+
+**Important :** Il n'est pas nécessaire de télécharger les datasets séparément. La commande `git clone` récupère automatiquement les fichiers présents dans la branche `develop`.
