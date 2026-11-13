@@ -10,3 +10,5 @@ __pycache__/
 
 # Données brutes volumineuses
 01_Dataset/Raw/*
+
+01_Dataset/Processed/*.csv
