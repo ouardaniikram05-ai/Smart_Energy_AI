@@ -66,4 +66,9 @@ Ce dataset constitue la base commune pour :
 - L'analyse des variables électriques.
 - La visualisation des consommations.
 
+## 7. Dataset horaire
+
+- **Fichier :** `household_hourly.csv.gz`, 34 159 lignes (une par heure), aucune valeur manquante.
+- **Attention :** la série a 7 sauts temporels (coupures de 15 h à 5 jours) ; la colonne `is_interpolated` (8 heures) sert à l'évaluation, pas comme variable d'entrée.
+
 **Projet : Smart_Energy_AI**
