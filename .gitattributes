@@ -1,0 +1,4 @@
+03_Consumption_Prediction/data/*.joblib filter=lfs diff=lfs merge=lfs -text
+03_Consumption_Prediction/data/*.csv filter=lfs diff=lfs merge=lfs -text
+03_Consumption_Prediction/notebooks/household_power_consumption_cleaned.csv filter=lfs diff=lfs merge=lfs -text
+03_Consumption_Prediction/results/prediction_analysis.csv filter=lfs diff=lfs merge=lfs -text
