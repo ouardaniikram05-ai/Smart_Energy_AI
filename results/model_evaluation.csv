@@ -1,0 +1,4 @@
+Model,Normal_observations,Anomalies_detected,Anomaly_percentage
+Isolation Forest,367912,41944,10.233838226108682
+Z-score,388717,21139,5.157665131168019
+LOF,397400,12456,3.0391161773891318

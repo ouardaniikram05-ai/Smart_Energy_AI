@@ -1,14 +1,55 @@
-# Environnement virtuel
-.venv/
 
-# Fichiers Python temporaires
+# ==============================
+# FICHIERS PYTHON
+# ==============================
 __pycache__/
 *.py[cod]
+*.pyo
 
-# Jupyter
-.ipynb_checkpoints/
+# ==============================
+# ENVIRONNEMENTS VIRTUELS
+# ==============================
+venv/
+.venv/
+env/
 
-# Données brutes volumineuses
-01_Dataset/Raw/*
+# ==============================
+# FICHIERS TEMPORAIRES
+# ==============================
+*.log
+.DS_Store
+Thumbs.db
 
-01_Dataset/Processed/*.csv
+# ==============================
+# INFORMATIONS CONFIDENTIELLES
+# ==============================
+.env
+
+# ==============================
+# DONNEES BRUTES VOLUMINEUSES
+# ==============================
+data/raw/
+data/original/
+
+# ==============================
+# DONNEES INTERMEDIAIRES REGENERABLES
+# ==============================
+results/preprocessed/
+
+# ==============================
+# CONFIGURATION DES EDITEURS
+# ==============================
+.vscode/
+.idea/
+
+
+# Gros fichiers générés : non versionnés
+/results/lof.pkl
+/results/consumption_analysis_complete.csv
+/results/predictions_isolation_forest.csv
+/results/predictions_lof.csv
+/results/predictions_zscore.csv
+/results/combined_model_predictions.csv
+/results/overload_analysis/overload_events.csv
+/results/overload_events.csv
+/results/overload_observations.csv

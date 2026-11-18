@@ -1,144 +1,220 @@
-# Smart_Energy_AI
+# ⚡ Smart Energy AI
 
-## Project Overview
--------------------
-Smart_Energy_AI est un système intelligent de surveillance et de prédiction de la consommation électrique d'une habitation, basé sur l'intelligence artificielle et les systèmes embarqués.
+## Détection intelligente des anomalies et analyse des consommations électriques
 
-L'objectif du projet est de mesurer la consommation électrique globale de la maison, d'analyser les habitudes d'utilisation de l'électricité, de prévoir la consommation future et de détecter les comportements électriques inhabituels.
+---
 
-Le système vise également à aider les utilisateurs à mieux comprendre la consommation énergétique de leur habitation et à optimiser leur utilisation de l'électricité.
-______________________________________________________________________________________________________________________
-## Objectifs du projet
------------------------
-Les principaux objectifs de ce projet sont :
-Surveiller la consommation électrique globale de l'habitation.
-Analyser les habitudes de consommation des utilisateurs.
-Prédire la consommation électrique future à l'aide de modèles de Machine Learning.
-Détecter les consommations anormales et les risques de surcharge électrique.
-Identifier les appareils les plus énergivores à partir de leurs caractéristiques techniques et de leur durée d'utilisation.
-Fournir des recommandations pour réduire la consommation électrique.
-Développer un prototype embarqué permettant de suivre la consommation en temps réel.
-______________________________________________________________________________________________________________________
-## Fonctionnalités principales
-------------------------------
-### Prédiction de la consommation électrique
-Utiliser des modèles de Machine Learning pour prévoir la consommation électrique future de l'habitation à partir des données historiques.
+## 1. Présentation du projet
 
-### Détection des anomalies
-Identifier les comportements inhabituels dans la consommation électrique et détecter les situations pouvant indiquer une anomalie ou un risque de surcharge.
+**Smart Energy AI** est un projet d'intelligence artificielle consacré à l'analyse des consommations électriques et à la détection des anomalies énergétiques.
 
-### Analyse des appareils électriques
-Estimer la consommation énergétique des différents appareils à partir de leur puissance nominale et de leur durée d'utilisation.
+Ce projet utilise des méthodes statistiques et des algorithmes de Machine Learning non supervisé afin d'identifier les comportements inhabituels dans les données de consommation électrique.
 
-### Tableau de bord intelligent
-Afficher les données de consommation, les graphiques, les prédictions et les résultats des analyses dans une interface simple et intuitive.
+L'objectif principal est de détecter les anomalies, analyser les dépassements de puissance et comparer différentes méthodes de détection pour mieux comprendre les comportements énergétiques.
 
-### Système embarqué
-Développer un prototype permettant de collecter les données électriques et de transmettre les mesures pour leur analyse en temps réel.
-______________________________________________________________________________________________________________________
-## Technologies et outils utilisés
-Intelligence artificielle et Machine Learning: Python, NumPy, Pandas, Scikit-learn, SciPy
+## 2. Objectifs du projet
 
-Analyse et visualisation des données: Matplotlib, Seaborn, Jupyter Notebook, Streamlit
+Les principaux objectifs sont :
 
-Systèmes embarqués: ESP32, Arduino, Raspberry Pi 5
+- Étudier les données de consommation électrique.
+- Comprendre les caractéristiques et les comportements de consommation.
+- Nettoyer et préparer les données avant leur analyse.
+- Détecter les anomalies à l'aide de méthodes statistiques et de Machine Learning.
+- Analyser l'évolution de la consommation énergétique.
+- Identifier et visualiser les dépassements de puissance.
+- Comparer les résultats des différents modèles.
+- Évaluer les accords et les différences entre les méthodes de détection.
 
-Gestion du projet et collaboration: Git, GitHub, Visual Studio Code
-______________________________________________________________________________________________________________________
-## Organisation du projet
+## 3. Méthodes de détection utilisées
 
+Le projet repose sur trois méthodes principales.
+
+### 3.1 Z-score
+
+Le Z-score est une méthode statistique qui mesure l'éloignement d'une observation par rapport à la moyenne.
+
+Il utilise la moyenne et l'écart-type pour identifier les valeurs inhabituelles.
+
+Dans notre projet, une observation est considérée comme suspecte lorsque :
+
+\[
+|Z| > 3
+\]
+
+### 3.2 Isolation Forest
+
+Isolation Forest est un algorithme de Machine Learning non supervisé spécialisé dans la détection des anomalies.
+
+Son principe consiste à isoler les observations à travers des divisions aléatoires.
+
+Les observations qui sont isolées plus facilement sont considérées comme potentiellement anormales.
+
+### 3.3 Local Outlier Factor (LOF)
+
+LOF est un algorithme de détection des anomalies basé sur la densité locale.
+
+Il compare la densité d'une observation avec celle de ses voisins.
+
+Une observation présentant une densité locale nettement plus faible que celle de ses voisins peut être considérée comme une anomalie.
+
+## 4. Architecture du projet
+
+Le projet est organisé de la manière suivante :
+
+```text
 Smart_Energy_AI/
 │
-├── 01_Dataset/
-│   ├── Raw/
-│   └── Processed/
+├── anomaly_detection/
+│   │
+│   ├── 01_etude_anomalies.py
+│   ├── 02_data_preprocessing.py
+│   ├── 03_detection_models.py
+│   ├── 04_consumption_analysis.py
+│   ├── 05_overload_analysis.py
+│   ├── 06_evaluation.py
+│   │
+│   ├── PLAN_DETECTION_ANOMALIES.md
+│   └── PROGRESSION_PROJET.md
 │
-├── 02_Data_Preparation/
-│   ├── notebooks/
-│   └── src/
+├── data/
 │
-├── 03_Consumption_Prediction/
-│   ├── notebooks/
-│   ├── models/
-│   └── src/
+├── results/
 │
-├── 04_Anomaly_Detection/
-│   ├── notebooks/
-│   ├── models/
-│   └── src/
+├── README.md
 │
-├── 05_Appliance_Analysis/
-│   └── src/
-│
-├── 06_Dashboard/
-│
-├── 07_Hardware/
-│   ├── ESP32/
-│   ├── Raspberry_Pi/
-│   └── Circuit_Diagrams/
-│
-├── 08_Integration/
-│
-├── 09_Documentation/
-│
-├── .gitignore
-├── requirements.txt
-└── README.md
-______________________________________________________________________________________________________________________
-##  Installation et configuration
+└── .gitignore
+```
 
-###  Cloner le dépôt
+## 5. Étapes de réalisation
+
+Le projet est divisé en six grandes parties.
+
+| Partie | Description |
+|---|---|
+| 01 | Étude exploratoire des anomalies |
+| 02 | Prétraitement et préparation des données |
+| 03 | Détection des anomalies avec trois modèles |
+| 04 | Analyse énergétique et consommation |
+| 05 | Analyse et visualisation des dépassements |
+| 06 | Évaluation et comparaison des modèles |
+
+### Partie 1 : Étude exploratoire
+
+Cette étape permet de découvrir le dataset, comprendre ses variables, étudier les distributions et identifier les premières caractéristiques des consommations électriques.
+
+### Partie 2 : Prétraitement des données
+
+Cette étape consiste à préparer les données pour les rendre exploitables par les méthodes d'analyse et les algorithmes de Machine Learning.
+
+### Partie 3 : Détection des anomalies
+
+Trois méthodes sont utilisées :
+
+- Z-score
+- Isolation Forest
+- Local Outlier Factor (LOF)
+
+Chaque méthode produit ses propres prédictions concernant les observations normales et anormales.
+
+### Partie 4 : Analyse énergétique
+
+Cette partie permet d'étudier les consommations électriques, leur évolution et leurs caractéristiques statistiques.
+
+### Partie 5 : Analyse et visualisation des dépassements
+
+Cette étape permet d'identifier les dépassements de puissance, d'étudier leur fréquence et leur répartition temporelle et de représenter les résultats graphiquement.
+
+### Partie 6 : Évaluation des modèles
+
+Cette dernière partie permet de comparer les résultats des trois méthodes, d'étudier les anomalies détectées individuellement et d'analyser les accords entre les modèles.
+
+## 6. Résultats de l'évaluation
+
+Lors de l'évaluation, les trois méthodes ont analysé **409 856 observations**.
+
+Les résultats obtenus sont les suivants :
+
+| Modèle | Anomalies détectées | Pourcentage |
+|---|---:|---:|
+| Isolation Forest | 41 944 | 10,23 % |
+| Z-score | 21 139 | 5,16 % |
+| LOF | 12 456 | 3,04 % |
+
+### Analyse du consensus
+
+La comparaison des prédictions a également permis d'obtenir les résultats suivants :
+
+- **21 991 observations** ont été détectées comme anormales par au moins deux modèles.
+- **1 269 observations** ont été détectées comme anormales par les trois modèles.
+- Le pourcentage de consensus majoritaire est de **5,37 %**.
+
+Ces résultats montrent que les trois méthodes n'identifient pas exactement les mêmes observations, car elles reposent sur des principes de détection différents.
+
+### Interprétation
+
+Isolation Forest a identifié le plus grand nombre d'anomalies dans cette expérience.
+
+Cependant, le nombre d'anomalies détectées ne suffit pas à déterminer quel modèle est le plus performant. Il faut également tenir compte de la pertinence des observations identifiées et, si des données de référence sont disponibles, de métriques d'évaluation adaptées.
+
+## 7. Technologies utilisées
+
+Les principales technologies et bibliothèques utilisées sont :
+
+- **Python** : langage de programmation.
+- **Pandas** : manipulation et analyse des données.
+- **NumPy** : calculs numériques.
+- **Matplotlib** : visualisation graphique.
+- **Scikit-learn** : implémentation des algorithmes de Machine Learning.
+- **Machine Learning non supervisé** : détection des comportements inhabituels.
+
+## 8. Installation du projet
+
+### Prérequis
+
+- Python 3.x
+- pip
+- Visual Studio Code (recommandé)
+
+### Installation des bibliothèques
+
+Ouvrir un terminal dans le dossier du projet et exécuter :
 
 ```bash
-git clone https://github.com/ouardaniikram05-ai/Smart_Energy_AI.git
-cd Smart_Energy_AI
+pip install pandas numpy matplotlib scikit-learn
 ```
 
-###  Créer l'environnement virtuel
+### Exécution
+
+Lancer les scripts dans l'ordre :
 
 ```bash
-python -m venv .venv
+python anomaly_detection/01_etude_anomalies.py
+
+python anomaly_detection/02_data_preprocessing.py
+
+python anomaly_detection/03_detection_models.py
+
+python anomaly_detection/04_consumption_analysis.py
+
+python anomaly_detection/05_overload_analysis.py
+
+python anomaly_detection/06_evaluation.py
 ```
 
-### Activer l'environnement virtuel sous Windows
+**Important :** les fichiers de données d'entrée doivent être disponibles dans les emplacements attendus par les scripts. Certaines parties utilisent également les résultats générés par les étapes précédentes.
 
-```powershell
-.\.venv\Scripts\Activate.ps1
-```
+## 9. Conclusion
 
-### Installer les bibliothèques nécessaires
+Le projet **Smart Energy AI** propose une approche d'analyse intelligente des consommations électriques basée sur les méthodes statistiques et le Machine Learning non supervisé.
 
-```bash
-python -m pip install -r requirements.txt
-```
-## Remarque – Accès aux datasets
+L'utilisation de Z-score, Isolation Forest et LOF permet de comparer plusieurs approches de détection et d'identifier des comportements inhabituels dans les données énergétiques.
 
-Pour accéder aux datasets nettoyés et préparés, les membres de l'équipe doivent récupérer la branche `develop` du dépôt GitHub.
+L'analyse des consommations, la visualisation des dépassements et l'évaluation comparative des modèles permettent d'obtenir une meilleure compréhension des anomalies électriques.
 
-### 1. Récupérer le projet
+Ce projet représente une application de l'intelligence artificielle dans le domaine de la gestion et de la surveillance énergétique.
 
-```bash
-git clone -b develop https://github.com/ouardaniikram05-ai/Smart_Energy_AI.git
-```
+---
 
-### 2. Localisation des datasets
+**Projet : Smart Energy AI**
 
-Les fichiers sont disponibles dans `01_Dataset/Processed/` :
-
-- `household_power_consumption_final.csv.gz` : dataset nettoyé (données à la minute).
-- `household_hourly.csv.gz` : dataset préparé (données horaires).
-- `readme.md` : documentation des datasets.
-
-### 3. Charger un dataset avec Python
-
-```python
-import pandas as pd
-
-df = pd.read_csv(
-    "../../01_Dataset/Processed/household_power_consumption_final.csv.gz",
-    compression="gzip",
-    parse_dates=["Datetime"]
-)
-```
-
-**Important :** Il n'est pas nécessaire de télécharger les datasets séparément. La commande `git clone` récupère automatiquement les fichiers présents dans la branche `develop`.
+**Domaine :** Intelligence artificielle, Machine Learning et Génie électrique.
