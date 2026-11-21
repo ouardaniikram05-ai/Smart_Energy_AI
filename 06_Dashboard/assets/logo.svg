@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 64" width="250" height="64">
+  <g>
+    <circle cx="32" cy="32" r="26" fill="none" stroke="#2A7F8E" stroke-width="5" stroke-linecap="round"
+            stroke-dasharray="122.5 163.4" transform="rotate(135 32 32)"/>
+    <circle cx="32" cy="32" r="19" fill="#12303F"/>
+    <polygon points="35.5,15 22,34.5 30.5,34.5 27.5,49 42,28.5 33.5,28.5" fill="#E8A317"/>
+  </g>
+  <text x="72" y="30" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700"
+        fill="#12303F" letter-spacing="-0.3">Smart Energy</text>
+  <text x="72" y="52" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="600"
+        fill="#2A7F8E" letter-spacing="3">AI</text>
+</svg>
