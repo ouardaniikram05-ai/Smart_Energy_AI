@@ -28,7 +28,7 @@ Toutes les données de consommation proviennent du fichier `household_hourly` :
 | `voltage_V`, `intensity_A` | Tension du réseau et courant. |
 | `sub_metering_1/2/3` | Trois compteurs par zone : cuisine, buanderie et réfrigérateur, chauffe-eau et climatisation. |
 | « Autres usages » | Calculé : puissance totale moins les 3 zones mesurées. |
-| `is_interpolated` | Heure reconstituée par le Membre 1 (aucune ne l'est dans ce fichier). |
+
 
 ### Précisions importantes
 
